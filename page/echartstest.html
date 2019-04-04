@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>图表</title>
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/plugins/echarts4.x/echarts.js"></script>
+
+	</head>
+	<body>
+		<div id="main" style="height: 800px;width:800px;border: 0.5px solid black;">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var jsChart = echarts.init(document.getElementById('main'));
+		option = {
+	     backgroundColor: '#000',
+	     globe: {
+         baseTexture: 'timg (2).jpg',
+        heightTexture: 'timg (2).jpg',
+        displacementScale: 0.04,
+        shading: 'realistic',
+        environment: 'timg (2).jpg',
+        realisticMaterial: {
+            roughness: 0.9
+        },
+        postEffect: {
+            enable: true
+        },
+        light: {
+            main: {
+                intensity: 5,
+                shadow: true
+            },
+            ambientCubemap: {
+                texture: 'data-gl/asset/pisa.hdr',
+                diffuseIntensity: 0.2
+            }
+        }
+    }
+};
+jsChart.setOption(option);
+	</script>
+</html>
